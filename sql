@@ -24,3 +24,13 @@ CREATE TABLE ORDERS (
 );
 
 
+-- Creating the ORDER_DETAILS table (to handle many-to-many relationship between ORDERS and PRODUCT)
+CREATE TABLE ORDER_DETAILS (
+    OrderDetailID NUMBER PRIMARY KEY,
+    OrderID NUMBER,
+    ProductID NUMBER,
+    Quantity NUMBER CHECK (Quantity > 0),
+    Subtotal NUMBER(10,2),
+    FOREIGN KEY (OrderID) REFERENCES ORDERS(OrderID) ON DELETE CASCADE,
+    FOREIGN KEY (ProductID) REFERENCES PRODUCT(ProductID) ON DELETE CASCADE
+);
