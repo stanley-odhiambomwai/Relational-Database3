@@ -15,3 +15,12 @@ CREATE TABLE PRODUCT (
     StockQuantity NUMBER DEFAULT 0 CHECK (StockQuantity >= 0)
 );
 
+-- Creating the ORDERS table
+CREATE TABLE ORDERS (
+    OrderID NUMBER PRIMARY KEY,
+    CustomerID NUMBER,
+    TotalAmount NUMBER(10,2) CHECK (TotalAmount >= 0),
+    FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID) ON DELETE CASCADE
+);
+
+
