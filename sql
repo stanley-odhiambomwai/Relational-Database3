@@ -1,0 +1,10 @@
+-- Creating the CUSTOMER table
+CREATE TABLE CUSTOMER (
+    CustomerID NUMBER PRIMARY KEY,
+    Name VARCHAR2(100) NOT NULL,
+    Email VARCHAR2(100) UNIQUE,
+    Phone VARCHAR2(15),
+    Address VARCHAR2(255)
+);
+
+
