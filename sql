@@ -38,3 +38,6 @@ CREATE TABLE ORDER_DETAILS (
 
 -- Adding Category column to PRODUCT table
 ALTER TABLE PRODUCT ADD Category VARCHAR2(20);
+
+-- Adding OrderDate column to ORDERS table with default value as current date
+ALTER TABLE ORDERS ADD OrderDate DATE DEFAULT SYSDATE;
