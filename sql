@@ -5,7 +5,15 @@ CREATE TABLE CUSTOMER (
     Email VARCHAR2(100) UNIQUE,
     Phone VARCHAR2(15),
     Address VARCHAR2(255)
+
+    INSERT INTO Customers (CustomerID, CustomerName, ContactName, Country)
+VALUES 
+(1, 'Alfreds Futterkiste', 'Maria Anders', 'Germany'),
+(2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Mexico'),
+(3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mexico');
+
 );
+
 
 -- Creating the PRODUCT table
 CREATE TABLE PRODUCT (
