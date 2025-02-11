@@ -22,6 +22,12 @@ CREATE TABLE PRODUCT (
     Price NUMBER(10,2) CHECK (Price > 0),
     StockQuantity NUMBER DEFAULT 0 CHECK (StockQuantity >= 0)
 
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+VALUES
+(1, 'Chai', 1, 1, '10 boxes x 20 bags', 18.00),
+(2, 'Chang', 1, 1, '24 - 12 oz bottles', 19.00),
+(3, 'Aniseed Syrup', 1, 2, '12 - 550 ml bottles', 10.00);
+
     
 );
 
