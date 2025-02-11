@@ -21,6 +21,8 @@ CREATE TABLE PRODUCT (
     ProductName VARCHAR2(100) NOT NULL,
     Price NUMBER(10,2) CHECK (Price > 0),
     StockQuantity NUMBER DEFAULT 0 CHECK (StockQuantity >= 0)
+
+    
 );
 
 -- Creating the ORDERS table
@@ -29,6 +31,13 @@ CREATE TABLE ORDERS (
     CustomerID NUMBER,
     TotalAmount NUMBER(10,2) CHECK (TotalAmount >= 0),
     FOREIGN KEY (CustomerID) REFERENCES CUSTOMER(CustomerID) ON DELETE CASCADE
+
+    INSERT INTO Orders (OrderID, CustomerID, EmployeeID, OrderDate)
+VALUES
+(10248, 1, 5, '2023-10-01'),
+(10249, 2, 6, '2023-10-02'),
+(10250, 3, 7, '2023-10-03');
+
 );
 
 
